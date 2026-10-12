@@ -2,13 +2,15 @@
 
 A production-grade, state-of-the-art **Data-Driven Packet Filtering Firewall** with heuristic anomaly detection, Scapy offline PCAP dissection, priority-ordered rule matching, synthetic traffic generation, and an interactive dark navy Security Operations Center (SOC) dashboard.
 
-![CyberWall SOC Dashboard](https://img.shields.io/badge/Firewall-Active_Defense-06B6D4?style=for-the-badge)
-![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688?style=for-the-badge&logo=fastapi)
-![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python)
-![Scapy](https://img.shields.io/badge/Packet_Inspection-Scapy-FF6F00?style=for-the-badge)
-![React + Vite](https://img.shields.io/badge/Frontend-React_18_%2B_Vite-61DAFB?style=for-the-badge&logo=react)
-![Tailwind CSS](https://img.shields.io/badge/Styling-Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css)
-![Pytest](https://img.shields.io/badge/Tests-25_Passed-10B981?style=for-the-badge&logo=pytest)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Packet--filter--firewall-181717?style=for-the-badge&logo=github)](https://github.com/kavin18022005/Packet-filter-firewall)
+[![CI Build](https://img.shields.io/badge/CI-GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions)](https://github.com/kavin18022005/Packet-filter-firewall/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://github.com/kavin18022005/Packet-filter-firewall/blob/main/LICENSE)
+[![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com)
+[![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python)](https://python.org)
+[![Scapy](https://img.shields.io/badge/Packet_Inspection-Scapy-FF6F00?style=for-the-badge)](https://scapy.net)
+[![React + Vite](https://img.shields.io/badge/Frontend-React_18_%2B_Vite-61DAFB?style=for-the-badge&logo=react)](https://vitejs.dev)
+[![Tailwind CSS](https://img.shields.io/badge/Styling-Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com)
+[![Pytest](https://img.shields.io/badge/Tests-25_Passed-10B981?style=for-the-badge&logo=pytest)](https://pytest.org)
 
 ---
 
@@ -219,3 +221,37 @@ py -3.12 -m pytest -v tests/
 - **Fail-Safe Exception Handling**: Any malformed network frame is safely quarantined and logged without crashing the engine.
 - **Automated Incident Response**: One-click rule generation stops active threat actors in real-time.
 - **Sliding-Window Heuristics**: Time-decayed memory prevents memory leaks while catching stealth attacks across minutes.
+
+---
+
+## 🚀 Deployment Guide
+
+### Option 1: Docker Compose (All-in-One Containerized)
+Clone the repository and run:
+```bash
+git clone https://github.com/kavin18022005/Packet-filter-firewall.git
+cd Packet-filter-firewall
+docker compose up --build
+```
+- Frontend: `http://localhost:5173`
+- Backend API Docs: `http://localhost:8000/docs`
+
+### Option 2: Cloud Deployment (Vercel + Render)
+1. **Frontend (Vercel)**:
+   - Connect repository `kavin18022005/Packet-filter-firewall` to [Vercel](https://vercel.com).
+   - Set Root Directory to `frontend`.
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
+   - Set Environment Variable: `VITE_API_URL=https://<your-backend-url>`
+
+2. **Backend (Render / Railway)**:
+   - Deploy as a Docker Web Service pointing to the root `Dockerfile`.
+   - Port: `8000`
+
+---
+
+## 👤 Author & Maintainer
+
+- **Developer**: Kavin S ([@kavin18022005](https://github.com/kavin18022005))
+- **Repository**: [https://github.com/kavin18022005/Packet-filter-firewall](https://github.com/kavin18022005/Packet-filter-firewall)
+- **License**: [MIT License](LICENSE)

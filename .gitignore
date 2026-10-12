@@ -9,6 +9,9 @@ htmlcov/
 *.db
 *.sqlite3
 firewall.db
+*.db-journal
+*.db-wal
+*.db-shm
 
 # Virtual Environments
 venv/
